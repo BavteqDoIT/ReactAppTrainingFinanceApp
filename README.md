@@ -22,7 +22,7 @@ Each section of the course is stored in a separate Git branch, named as follows:
 
 | Branch Name | Section Topic |
 |-------------|----------------|
-| `FinanceApp` | FinanceApp  |
+| `finance-app` | finance-app  |
 
 
 > You can check out any section with:
