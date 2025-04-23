@@ -33,33 +33,28 @@ const DUMMY_EXPENSES = [
   },
   {
     id: "e6",
-    description: "A pair of shoes",
-    amount: 59.99,
-    date: new Date("2025-04-16"),
+    description: "Socks",
+    amount: 9.99,
+    date: new Date("2025-04-18"),
   },
   {
     id: "e7",
-    description: "A pair of trousers",
-    amount: 89.91,
-    date: new Date("2025-03-25"),
+    description: "Coffee",
+    amount: 4.5,
+    date: new Date("2025-04-20"),
   },
   {
     id: "e8",
-    description: "Some bananas",
-    amount: 5.5,
-    date: new Date("2025-04-17"),
+    description: "Notebook",
+    amount: 3.25,
+    date: new Date("2025-03-22"),
   },
+  { id: "e9", description: "Pen", amount: 1.1, date: new Date("2025-04-10") },
   {
-    id: "e9",
-    description: "A book",
-    amount: 14.87,
-    date: new Date("2025-03-16"),
-  },
-  {
-    id: "e0",
-    description: "Another book",
-    amount: 18.59,
-    date: new Date("2025-04-04"),
+    id: "e10",
+    description: "USB cable",
+    amount: 7.99,
+    date: new Date("2025-04-12"),
   },
 ];
 
@@ -74,18 +69,18 @@ function expensesReducer(state, action) {
   switch (action.type) {
     case "ADD":
       const id = new Date().toString() + Math.random().toString();
-      return [{ ...action.payload }, ...state];
+      return [{id, ...action.payload }, ...state];
     case "UPDATE":
       const updatableExpenseIndex = state.findIndex(
         (expense) => expense.id === action.payload.id
       );
       const updatableExpense = state[updatableExpenseIndex];
-      const updatedItem = {...updatableExpense, ...action.payload.data};
+      const updatedItem = { ...updatableExpense, ...action.payload.data };
       const updatedExpenses = [...state];
       updatedExpenses[updatableExpenseIndex] = updatedItem;
       return updatedExpenses;
     case "DELETE":
-        return state.filter((expense) => expense.id !== action.payload);
+      return state.filter((expense) => expense.id !== action.payload);
     default:
       return state;
   }
@@ -110,10 +105,14 @@ function ExpensesContextProvider({ children }) {
     expenses: expensesState,
     addExpense: addExpense,
     deleteExpense: deleteExpense,
-    updateExpense: updateExpense
+    updateExpense: updateExpense,
   };
 
-  return <ExpensesContext.Provider value={value}>{children}</ExpensesContext.Provider>;
+  return (
+    <ExpensesContext.Provider value={value}>
+      {children}
+    </ExpensesContext.Provider>
+  );
 }
 
 export default ExpensesContextProvider;
