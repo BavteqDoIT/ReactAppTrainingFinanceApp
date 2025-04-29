@@ -67,3 +67,10 @@ Each section of the course is stored in a separate Git branch, named as follows:
 This repository is part of my personal learning journey. If you’re also taking this course or learning React Native, feel free to fork this repo, follow along, or reach out for collaboration or questions.
 
 ---
+
+## Projects in This Repository
+
+- [Finance App](https://github.com/BavteqDoIT/ReactAppTraining/tree/finance-app)
+- [Todo App](https://github.com/BavteqDoIT/ReactAppTraining/tree/todo-app)
+- [Weather App](https://github.com/BavteqDoIT/ReactAppTraining/tree/weather-app)
+
