@@ -71,6 +71,6 @@ This repository is part of my personal learning journey. If you’re also taking
 ## Projects in This Repository
 
 - [Finance App](https://github.com/BavteqDoIT/ReactAppTraining/tree/finance-app)
-- [Todo App](https://github.com/BavteqDoIT/ReactAppTraining/tree/todo-app)
-- [Weather App](https://github.com/BavteqDoIT/ReactAppTraining/tree/weather-app)
+- [User Auth App](https://github.com/BavteqDoIT/ReactAppTraining/tree/user-auth-app)
+- [Native Feature App ](https://github.com/BavteqDoIT/ReactAppTraining/tree/native-feature-app)
 
